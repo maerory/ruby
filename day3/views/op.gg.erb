@@ -1,0 +1,16 @@
+<form>
+    <select name="search_method" required="true">
+        <option value="OP.GG">OP.GG</option>
+        <option value="winrate">최근 승패 조회</option>
+    </select>
+    <input type="text" name="ID">
+    <input type="submit" value="검색">
+</form>
+
+<% if params[:ID] %>
+<ul>
+    <li><%= params[:ID] %>님의 전적입니다</li>
+    <li><%= @win %> 승</li>
+    <li><%= @lose %> 패</li>
+</ul>
+<% end %>
