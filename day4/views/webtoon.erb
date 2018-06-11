@@ -1,0 +1,32 @@
+<table>
+    <thread>
+        <th>이미지</th>
+        <th>제목</th>
+        <th>링크</th>
+    </thread>
+    <tbody>
+        <th colspan="3" style="color:blue">Daum</th>
+    </tbody>
+    <tbody>
+        <% @daum_webtoon.each do |toon| %>
+        <tr>
+            <td><img src="<%= toon["image"] %>"></td>
+            <td><%= toon["title"] %></td>
+            <td><a href="<%= toon["link"] %>">보러가기</a></td>
+        </tr>
+        <% end %>
+    </tbody>
+    <tbody>
+        <th colspan="3" style="color:green">Naver</th>
+    </tbody>
+    <tbody>
+        <% @naver_webtoon.each do |toon| %>
+        <tr>
+            <td><img src="<%= toon["image"] %>"></td>
+            <td><%= toon["title"] %></td>
+            <td><a href="<%= toon["link"] %>">보러가기</a></td>
+        </tr>
+        <% end %>
+    </tbody>
+
+</table>
